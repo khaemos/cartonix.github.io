@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cartonix | Kits para construir con cartón</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="logo" href="#inicio" aria-label="Cartonix inicio">CARTONIX</a>
+      <button class="menu-button" type="button" data-menu-toggle aria-expanded="false" aria-controls="main-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" id="main-nav" aria-label="Navegacion principal">
+        <a href="#kits">Kits</a>
+        <a href="#herramientas">Herramientas</a>
+        <a href="#creaciones">Creaciones</a>
+        <a href="#ideas">Ideas</a>
+        <a href="#sobre">Sobre Cartonix</a>
+      </nav>
+      <div class="header-actions">
+        <a class="icon-link" href="https://www.instagram.com/cartonix_cr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"></rect><circle cx="12" cy="12" r="3.4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
+        </a>
+        <button class="icon-link cart-icon" type="button" data-open-cart aria-label="Abrir carrito">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h15l-2 9H8L6 8Z"></path><path d="M9 8a3 3 0 0 1 6 0"></path><circle cx="9" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg>
+          <span id="cart-count">0</span>
+        </button>
+        <a class="buy-button" href="#kits">Comprar</a>
+      </div>
+    </header>
+
+    <main id="inicio">
+      <section class="hero">
+        <img class="hero-image" src="assets/hero-cartonix.png" alt="Robot de cartón armado con conectores Cartonix" />
+        <div class="hero-content">
+          <p class="pill">Haz. Crea. Juega. Repite.</p>
+          <h1>Construye lo que imagines con <span>cartón</span></h1>
+          <p class="hero-copy">
+            Herramientas y conectores reutilizables para crear juguetes, máscaras, juegos, robots e inventos de cartón.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-yellow" href="#kits">Ver kits <span>→</span></a>
+            <a class="btn btn-dark" href="#creaciones">Ver creaciones</a>
+          </div>
+          <div class="benefits" aria-label="Beneficios">
+            <span>Reutilizable</span>
+            <span>Seguro</span>
+            <span>Creativo</span>
+            <span>Para todos</span>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <svg viewBox="0 0 80 80" aria-hidden="true">
+            <path d="M40 8 68 23v34L40 72 12 57V23L40 8Z"></path>
+            <path d="m12 23 28 15 28-15M40 38v34M26 16l28 15"></path>
+          </svg>
+          <p>Todo lo que necesitas para crear sin límites.</p>
+          <strong>Hecho para makers de todas las edades.</strong>
+        </aside>
+      </section>
+
+      <section class="maker-strip" id="herramientas">
+        <h2>Diseñado para makers</h2>
+        <div class="maker-steps">
+          <article>
+            <span class="step-icon">✂</span>
+            <div>
+              <h3>1. Corta</h3>
+              <p>Usa cartón reciclado o cajas que ya tengas en casa.</p>
+            </div>
+          </article>
+          <article>
+            <span class="step-icon">⌁</span>
+            <div>
+              <h3>2. Conecta</h3>
+              <p>Une piezas con Cartornillos y herramientas seguras.</p>
+            </div>
+          </article>
+          <article>
+            <span class="step-icon">▣</span>
+            <div>
+              <h3>3. Construye</h3>
+              <p>Crea juguetes, máscaras, robots y estructuras.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="featured" id="kits">
+        <div class="featured-intro">
+          <h2>Kits destacados</h2>
+          <p>Kits físicos, accesorios y tornillos para construir con cartón desde el primer día.</p>
+          <button class="btn btn-dark" type="button" data-open-cart>Ver carrito <span>→</span></button>
+        </div>
+        <div class="kit-grid" id="product-grid"></div>
+      </section>
+
+      <section class="ideas" id="ideas">
+        <div class="ideas-intro">
+          <p class="pill">Crea en grande</p>
+          <h2>Un sistema simple para talleres, escuelas y tardes de inventos.</h2>
+          <p>
+            Cartonix combina herramientas seguras, tornillos reutilizables y accesorios impresos en 3D para que el cartón
+            deje de ser solo material reciclado y se convierta en una plataforma de construcción.
+          </p>
+        </div>
+        <div class="idea-cards">
+          <article>
+            <span>01</span>
+            <h3>Corta y marca</h3>
+            <p>La sierra y el roller ayudan a preparar piezas de cartón con bordes y dobleces más limpios.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Une sin pegamento</h3>
+            <p>Los tornillos y accesorios permiten armar, probar, desmontar y volver a construir.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Escala tus ideas</h3>
+            <p>Agrega visagras, deslizadores y manillas para crear puertas, mecanismos y estructuras móviles.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="creations" id="creaciones">
+        <div class="gallery-intro">
+          <h2>Que puedes crear</h2>
+          <p>Inspirate con ideas reales hechas para nuestra comunidad.</p>
+          <a class="btn btn-yellow" href="https://www.instagram.com/cartonix_cr" target="_blank" rel="noopener noreferrer">Ver galería <span>→</span></a>
+        </div>
+        <div class="gallery-grid">
+          <article class="creation-card single-creation">
+            <img src="assets/creations-cartonix.png" alt="Creaciones de cartón hechas con Cartonix" />
+          </article>
+        </div>
+      </section>
+
+      <section class="trust" id="sobre">
+        <div>
+          <p class="pill">Compra con confianza</p>
+          <h2>Sobre Cartonix</h2>
+          <p>
+            Cartonix crea herramientas y piezas impresas en 3D para que cualquier caja de cartón pueda convertirse en
+            una construcción fuerte, divertida y reutilizable. Cada kit está pensado para makers, familias, escuelas y
+            talleres que quieren crear sin depender de pegamento permanente.
+          </p>
+        </div>
+        <div class="trust-grid">
+          <article>
+            <h3>Pago claro</h3>
+            <p>El carrito calcula el total. Después, confirmas el pedido con tu recibo.</p>
+          </article>
+          <article>
+            <h3>Kits físicos</h3>
+            <p>Recibes herramientas, tornillos y accesorios reales, empacados para que puedas empezar a construir rapido.</p>
+          </article>
+          <article>
+            <h3>Soporte maker</h3>
+            <p>Si tienes dudas sobre cómo usar una pieza o armar una idea, puedes pedir ayuda antes o después de comprar.</p>
+          </article>
+          <article>
+            <h3>Reemplazos</h3>
+            <p>Si una pieza llega dañada, Cartonix revisa el caso y reemplaza las partes afectadas del kit.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <a class="footer-logo" href="#inicio">CARTONIX</a>
+        <p>Herramientas y kits impresos en 3D para construir con cartón.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#kits">Kits</a>
+        <a href="#herramientas">Herramientas</a>
+        <a href="#creaciones">Creaciones</a>
+        <a href="#sobre">Compra segura</a>
+      </nav>
+      <div class="footer-contact">
+        <strong>Pago por SINPE o PayPal</strong>
+      </div>
+    </footer>
+
+    <aside class="cart-drawer" id="cart-drawer" aria-hidden="true" aria-label="Carrito de compras">
+      <div class="drawer-overlay" data-close-cart></div>
+      <div class="drawer-panel">
+        <div class="drawer-header">
+          <h2>Tu carrito</h2>
+          <button type="button" class="close-button" data-close-cart aria-label="Cerrar carrito">×</button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-empty" id="cart-empty">Tu carrito está listo para una idea grande.</div>
+        <div class="cart-summary">
+          <div><span>Subtotal</span><strong id="subtotal">₡ 0</strong></div>
+          <div><span>Envío estimado</span><strong id="shipping">₡ 0</strong></div>
+          <div><span>Impuesto estimado</span><strong id="tax">₡ 0</strong></div>
+          <div class="total"><span>Total</span><strong id="total">₡ 0</strong></div>
+        </div>
+        <form name="cartonix-order" data-netlify="true" hidden>
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <input type="text" name="order" />
+          <input type="text" name="total" />
+          <input type="text" name="paypalUrl" />
+          <input type="text" name="recipient" />
+        </form>
+
+        <form class="checkout-form" id="checkout-form">
+          <h3>Datos para preparar el pedido</h3>
+          <div class="form-grid">
+            <label>Nombre completo<input required name="name" autocomplete="name" /></label>
+            <label>Email<input required type="email" name="checkout-email" autocomplete="email" /></label>
+          </div>
+          <button class="btn btn-yellow checkout-button" type="submit">Continuar a PayPal</button>
+          <p class="payment-note">El pedido se registra con nombre, email, productos y total. Luego se abre PayPal para pagar.</p>
+        </form>
+      </div>
+    </aside>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
