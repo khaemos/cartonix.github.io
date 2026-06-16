@@ -1,4 +1,4 @@
-const PAYPAL_ME_USERNAME = "cartonix";
+const WHATSAPP_PHONE = "50672739448";
 const ORDER_EMAIL = "caemostajo@gmail.com";
 
 const products = [
@@ -208,6 +208,19 @@ function buildOrderSummary(items) {
   return items.map((item) => `${item.quantity} x ${item.name} (${money.format(item.price)} c/u)`).join(" | ");
 }
 
+function buildWhatsAppMessage({ items, total, customerName, customerEmail }) {
+  const orderLines = items.map((item) => `- ${item.quantity} x ${item.name} (${money.format(item.price)} c/u)`).join("\n");
+
+  return [
+    "Hola, quisiera realizar el pedido de:",
+    orderLines,
+    `Total: ${money.format(total)}`,
+    `Nombre: ${customerName}`,
+    `Email: ${customerEmail}`,
+    "Quedo atento a la confirmación. Muchas gracias.",
+  ].join("\n");
+}
+
 function openCart() {
   cartDrawer.classList.add("open");
   cartDrawer.setAttribute("aria-hidden", "false");
@@ -277,7 +290,7 @@ checkoutForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   if (cart.size === 0) {
-    showToast("Agrega un kit antes de pagar");
+    showToast("Agrega un kit antes de realizar el pedido");
     return;
   }
 
@@ -285,7 +298,8 @@ checkoutForm.addEventListener("submit", async (event) => {
   const formData = new FormData(checkoutForm);
   const customerName = formData.get("name");
   const customerEmail = formData.get("checkout-email");
-  const paypalUrl = `https://www.paypal.me/${PAYPAL_ME_USERNAME}/${total}`;
+  const whatsappMessage = buildWhatsAppMessage({ items, total, customerName, customerEmail });
+  const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(whatsappMessage)}`;
 
   try {
     await fetch("/", {
@@ -297,16 +311,16 @@ checkoutForm.addEventListener("submit", async (event) => {
         email: customerEmail,
         order: buildOrderSummary(items),
         total: money.format(total),
-        paypalUrl,
+        whatsappUrl,
         recipient: ORDER_EMAIL,
       }),
     });
   } catch (error) {
-    showToast("No se pudo registrar el pedido, pero puedes continuar a PayPal.");
+    showToast("Su pedido a sido realizado.");
   }
 
-  window.open(paypalUrl, "_blank", "noopener,noreferrer");
-  showToast("Pedido registrado. PayPal se abrió para completar el pago.");
+  window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+  showToast("Su pedido a sido realizado.");
 });
 
 renderProducts();
